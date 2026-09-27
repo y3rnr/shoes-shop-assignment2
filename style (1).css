@@ -1,0 +1,396 @@
+/* --- Общие настройки и Box Model --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(180deg, #0d001a 0%, #1e0042 100%);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Зафиксированная шапка сайта (Flexbox) --- */
+header {
+    background-color: #1a162b;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #f0a500;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #f0a500;
+}
+
+/* --- Основной контент --- */
+main {
+    padding: 120px 40px 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+}
+
+/* --- Главный экран (Home - Hero Section) --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75vh;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.hero-content {
+    flex: 1.3;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 1.05;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    color: #b0b0b0;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-card-box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image-card {
+    background-color: #ffffff;
+    border: 4px solid #f0a500;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image-card img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-badge {
+    background-color: #1a162b;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* --- Статистика --- */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 50px 0;
+}
+
+.stat-box h3 {
+    color: #f0a500;
+    font-size: 30px;
+}
+
+.stat-box p {
+    color: #b0b0b0;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* --- Каталог и сетка товаров (CSS Grid) --- */
+.title {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #a1a1aa;
+    font-size: 14px;
+    max-width: 500px;
+    margin-bottom: 24px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.btn-filter {
+    padding: 6px 18px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+.btn-filter.active, .btn-filter:hover {
+    background: #f0a500;
+    color: #fff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: #1a162b;
+    border: 2px solid #f0a500;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
+
+.card-img {
+    background: #fff;
+    border-radius: 8px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card h3, .card-title {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price {
+    color: #f0a500;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Кнопки */
+.btn-primary, .btn-buy, .btn {
+    background-color: #f0a500;
+    color: #120f1e;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary:hover, .btn-buy:hover, .btn:hover {
+    background-color: #d38e00;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Страница О нас (About Team) --- */
+.about-section {
+    margin-bottom: 50px;
+}
+
+.article {
+    display: flex;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.article:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.year {
+    width: 150px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f0a500;
+}
+
+.article p, .feature-card p, .feature-box p {
+    font-size: 14px;
+    color: #b3a8c1;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card, .feature-box {
+    background-color: #1a162b;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-card h3, .feature-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.banner {
+    background-color: #f0a500;
+    border-radius: 12px;
+    padding: 35px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    color: #120f1e;
+}
+
+.banner h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.banner p {
+    font-size: 14px;
+    color: #120f1e;
+}
+
+/* --- Страница контактов (Contact Us) --- */
+.contact-section {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #1a162b;
+    border: 2px solid #f0a500;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #120f1e;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f0a500;
+}
+
+/* --- Подвал --- */
+footer {
+    background-color: #1a162b;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    color: #b3a8c1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
