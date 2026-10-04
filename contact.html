@@ -6,43 +6,63 @@
     <title>STRIDE — Contact Us</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
     <header>
         <div class="logo-area">
-            <span class="logo-text">STRIDE</span>
+            <img src="images/favicon.svg" alt="STRIDE Logo" width="40" height="40">
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="catalogue.html">Catalogue</a>
             <a href="about.html">About Team</a>
-            <a href="contact.html" class="active">Contact Us</a>
+            <a href="contact.html" aria-current="page" class="active">Contact Us</a>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="contact-section">
             <div class="contact-header">
                 <h1>Contact Us</h1>
-                <p>Have questions about sizes, delivery, or cooperation? Fill out the form below.</p>
+                <p>Have questions about sizes or delivery? Use this static demonstration form.</p>
             </div>
 
-            <form class="contact-form">
+            <p id="demo-note" class="demo-note">
+                Demo only. Your information is not sent or stored. Use sample details.
+            </p>
+
+            <form action="demo-result.html" method="get" aria-describedby="demo-note" class="contact-form">
                 <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Write your name" required>
+                    <label for="full-name">Your Name:</label>
+                    <input id="full-name" type="text" autocomplete="name" placeholder="Palaenshe Palanshiev" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Write your email" required>
+                    <input id="email" type="email" autocomplete="email" placeholder="palaenshe@example.com" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
                 </div>
-                <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                <button type="submit" class="btn-primary btn-full">Check Demo Form</button>
             </form>
+        </section>
+
+        <!-- Native HTML Interaction: FAQ without JS -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <details class="faq-item">
+                <summary class="faq-summary">How long does delivery take?</summary>
+                <p class="faq-answer">We deliver nationwide within 1-2 business days.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-summary">What is your return policy?</summary>
+                <p class="faq-answer">You can return any pair within 14 days if it has not been worn outdoors.</p>
+            </details>
         </section>
     </main>
 
