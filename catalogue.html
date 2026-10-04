@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STRIDE — Contact Us</title>
+    <title>STRIDE — Catalogue</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
@@ -14,56 +13,74 @@
         <div class="logo-area">
             <img src="images/favicon.svg" alt="STRIDE Logo" width="40" height="40">
         </div>
-        <nav aria-label="Main navigation">
+        <nav>
             <a href="index.html">Home</a>
-            <a href="catalogue.html">Catalogue</a>
+            <a href="catalogue.html" class="active">Catalogue</a>
             <a href="about.html">About Team</a>
-            <a href="contact.html" aria-current="page" class="active">Contact Us</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
-    <main id="main-content">
-        <section class="contact-section">
-            <div class="contact-header">
-                <h1>Contact Us</h1>
-                <p>Have questions about sizes or delivery? Use this static demonstration form.</p>
-            </div>
+    <main>
+        <h1 class="title">Catalogue</h1>
+        <p class="subtitle">From lightweight running sneakers to rugged winter boots — find your pair.</p>
 
-            <p id="demo-note" class="demo-note">
-                Demo only. Your information is not sent or stored. Use sample details.
-            </p>
+        <div class="filters">
+            <a href="catalogue.html" class="btn-filter active">All</a>
+            <a href="catalogue.html" class="btn-filter">Hit</a>
+            <button class="btn-filter">Running</button>
+        </div>
 
-            <form action="demo-result.html" method="get" aria-describedby="demo-note" class="contact-form">
-                <div class="form-group">
-                    <label for="full-name">Your Name:</label>
-                    <input id="full-name" type="text" autocomplete="name" placeholder="Palaenshe Palanshiev" required>
+        <div class="grid-container">
+            <article class="card">
+                <div class="card-img"><img src="images/urbanShoes1.png" alt="Shoes"></div>
+                <div class="card-title">Loewe x On Running Cloudtilt</div>
+                <div class="card-footer">
+                    <span class="price">24,500 KZT</span>
+                    <button class="btn-buy">Add to Cart</button>
                 </div>
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input id="email" type="email" autocomplete="email" placeholder="palaenshe@example.com" required>
+            </article>
+            <article class="card">
+                <div class="card-img"><img src="images/athleticRunningShoes1.png" alt="Shoes"></div>
+                <div class="card-title">N. Initiator Light Grey Custom</div>
+                <div class="card-footer">
+                    <span class="price">28,990 KZT</span>
+                    <button class="btn-buy">Add to Cart</button>
                 </div>
-                <div class="form-group">
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </article>
+            <article class="card">
+                <div class="card-img"><img src="images/autumnHit.png" alt="Shoes"></div>
+                <div class="card-title">V5 RNR Black White</div>
+                <div class="card-footer">
+                    <span class="price">24,500 KZT</span>
+                    <button class="btn-buy">Add to Cart</button>
                 </div>
-                <button type="submit" class="btn-primary btn-full">Check Demo Form</button>
-            </form>
-        </section>
-
-        <!-- Native HTML Interaction: FAQ without JS -->
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            
-            <details class="faq-item">
-                <summary class="faq-summary">How long does delivery take?</summary>
-                <p class="faq-answer">We deliver nationwide within 1-2 business days.</p>
-            </details>
-
-            <details class="faq-item">
-                <summary class="faq-summary">What is your return policy?</summary>
-                <p class="faq-answer">You can return any pair within 14 days if it has not been worn outdoors.</p>
-            </details>
-        </section>
+            </article>
+            <article class="card">
+                <div class="card-img"><img src="images/owens.jpg" alt="Shoes"></div>
+                <div class="card-title"> Rick Owens Porterville Jumbo Laced Low</div>
+                <div class="card-footer">
+                    <span class="price">55,500 KZT</span>
+                    <button class="btn-buy">Add to Cart</button>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img"><img src="images/saint.webp" alt="Shoes"></div>
+                <div class="card-title">Saint Laurent Court Classic</div>
+                <div class="card-footer">
+                    <span class="price">60,500 KZT</span>
+                    <button class="btn-buy">Add to Cart</button>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img"><img src="images/peg.webp" alt="Shoes"></div>
+                <div class="card-title">Nike Pegasus</div>
+                <div class="card-footer">
+                    <span class="price">25,500 KZT</span>
+                    <button class="btn-buy">Add to Cart</button>
+                </div>
+            </article>
+        </div>
     </main>
 
     <footer>
